@@ -1,0 +1,159 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr;
+  grid-template-rows: 2fr 0.1fr 1fr;
+  grid-template-areas:
+    "sidebar box1 box1 box2"
+    "sidebar box3 box4 box2"
+    "sidebar box5 box5 box2";
+
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+}
+#sidebar {
+  background: #18ffff;
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#employeeInfo {
+  background: #6fffd2;
+  grid-area: box1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#employeeAvailability {
+  background: white;
+  grid-area: box3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#totalEmployees {
+  background: white;
+  grid-area: box4;
+  overflow: auto;
+  align-items: center;
+}
+#topHiring {
+  background: white;
+  border-style: solid;
+  border-color: aquamarine;
+  grid-area: box5;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#application {
+  background: #73ffba;
+  grid-area: box2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr;
+    grid-template-areas: "sidebar", "box1", "box2", "box3", "box4", "box5";
+  }
+}
+
+.Availability {
+  display: grid;
+  height: 50vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "box1a box2a"
+    "box3a box4a";
+  padding: 2rem;
+  grid-gap: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #004d40;
+
+  background-color: white;
+}
+.piechart {
+  overflow: hidden;
+  height: 100%;
+  font-size: small;
+}
+#attendance {
+  padding: 1rem;
+  text-align: left;
+  border-radius: 0.5rem;
+  background: white;
+  grid-area: box1a;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #8abab2;
+}
+#late {
+  padding: 1rem;
+  text-align: left;
+  border-radius: 0.5rem;
+  background: white;
+  grid-area: box2a;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #8abab2;
+}
+#absent {
+  text-align: left;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: white;
+  grid-area: box3a;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #8abab2;
+}
+#leave {
+  text-align: left;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: white;
+  grid-area: box4a;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #8abab2;
+}
+
+#attendance:hover,
+#late:hover,
+#absent:hover,
+#leave:hover {
+  background-color: #f0f0f0;
+  /* Change the background color on hover */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+  transform: scale(1.05);
+  /* Scale the element on hover (optional) */
+}
+
+.ApplicationBar {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+
+  grid-auto-rows: minmax(1rem, auto);
+  grid-template-areas:
+    "boxapp1"
+    "boxapp2"
+    "boxapp3"
+    "boxapp4";
+
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+}

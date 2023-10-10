@@ -1,0 +1,55 @@
+.topbox{
+    font-size: 13px;
+   
+    
+    .list{
+        margin-bottom: 10px;
+
+        .listItem{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            
+
+            .user{
+                display: flex;
+                gap:20px;
+                
+                .userText{
+                    display: flex;
+                    flex-direction: column;
+                    gap:5px;
+
+                    .type{
+                        font-weight: 100;
+                    }
+                }
+                
+            }
+
+            
+        }
+
+    }
+
+}
+
+.topbox .list .listItem img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+} 
+
+.topbox h2{
+    margin-bottom: 40px;
+}
+
+@media(max-width: 768px){
+    .topbox{
+        flex-direction: column;
+    }
+    
+}
